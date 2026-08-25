@@ -1,0 +1,12 @@
+# SatQuery AI — Lightweight Backend Requirements for Render Free Tier
+# (Excludes heavy GPU-only packages like torch/bitsandbytes for CPU deployment)
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+pillow>=10.2.0
+numpy>=1.26.0
+groq>=0.5.0
+requests>=2.31.0
+reportlab>=4.1.0
+scipy>=1.12.0

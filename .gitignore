@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment & Secrets
+.env
+*.env.local
+*.env.production
+
+# Model Weights (too large for Git)
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+finetuning/geochat_bigearthnet_lora_final/
+finetuning/geochat_bigearthnet_lora_checkpoints/
+finetuning/bigearthnet_txt_real/
+finetuning/bigearthnet_txt_selected.json
+finetuning/cdvqa_real/
+finetuning/rsvqa_real/
+finetuning/rsvqa_lr_raw/
+finetuning/second_images/
+finetuning/cdvqa_repo/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data uploads
+data/uploads/
+data/_vrsbench_eval_cache/
+
+# Temp & Download files
+_commit_msg_tmp.txt
+coolacloy-*.mp4
+*.tmp
+scratch/
+.venv_eval/
+_to_delete/
+docs/research_paper/pdf_preview/
+scripts/run_bench.py
+scripts/test_*.py
+frontend/public/videos/hero_desktop_4k.mp4
+frontend/public/videos/ref_video.mp4
+frontend/public/videos/ref_frame.jpg
+.agents/
+Claude outputs/
+SIH_Pitch_Strategy_and_Slide_Content.md

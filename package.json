@@ -1,0 +1,9 @@
+{
+  "name": "satquery",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"const fs=require('fs'),cp=require('child_process');if(fs.existsSync('frontend')){cp.execSync('npm --prefix frontend run build',{stdio:'inherit'})}else{cp.execSync('npm run build',{stdio:'inherit'})}\"",
+    "dev": "node -e \"const fs=require('fs'),cp=require('child_process');if(fs.existsSync('frontend')){cp.execSync('npm --prefix frontend run dev',{stdio:'inherit'})}else{cp.execSync('npm run dev',{stdio:'inherit'})}\""
+  }
+}
