@@ -1,0 +1,63 @@
+{
+  "curated_knowledge_entries": [
+    {
+      "id": "kb_lulc_01",
+      "category": "Bhuvan LULC Legend",
+      "entity": "Built-up Urban / Rural Settlements",
+      "code": "LULC_01_BUILTUP",
+      "description": "Areas characterized by human settlements, buildings, transport networks, and commercial complexes with high artificial surface reflectance and strong SAR microwave double-bounce corner reflections.",
+      "spectral_characteristics": "High NIR reflectance in concrete roofs, high variance across optical RGB bands, SAR backscatter > -8 dB."
+    },
+    {
+      "id": "kb_lulc_02",
+      "category": "Bhuvan LULC Legend",
+      "entity": "Agricultural Cropland (Kharif / Rabi / Zaid)",
+      "code": "LULC_02_AGRICULTURE",
+      "description": "Intensively cultivated land parcels showing seasonal vegetation dynamics. High NDVI values (0.4 to 0.8) during active vegetative canopy phases, transitioning to bare soil/stubble post-harvest.",
+      "spectral_characteristics": "High Green/NIR reflectance, low Red reflectance due to chlorophyll absorption, moderate SAR volume scattering."
+    },
+    {
+      "id": "kb_lulc_03",
+      "category": "Bhuvan LULC Legend",
+      "entity": "Inland Water Bodies & Riverine Drainage",
+      "code": "LULC_03_WATER",
+      "description": "Perennial and seasonal water bodies including rivers, lakes, reservoirs, and drainage canals. High absorption in NIR/SWIR bands, negative NDWI.",
+      "spectral_characteristics": "Low optical reflectance (< 10%), near-zero NIR, specular SAR reflection with backscatter < -18 dB."
+    },
+    {
+      "id": "kb_lulc_04",
+      "category": "Bhuvan LULC Legend",
+      "entity": "Forest & Dense Tree Canopy",
+      "code": "LULC_04_FOREST",
+      "description": "Dense deciduous, evergreen, and mangrove forests exhibiting multi-layered canopy structures with high biomass volume scattering in C-band radar.",
+      "spectral_characteristics": "Consistent high NDVI (> 0.65), high radar cross-section volume scattering (-12 to -8 dB)."
+    },
+    {
+      "id": "kb_district_01",
+      "category": "Indian Administrative Geography",
+      "entity": "Hyderabad District, Telangana",
+      "code": "DIST_TS_HYD",
+      "description": "Major urban agglomeration in the Deccan Plateau. Key geospatial landmarks include Hussain Sagar Lake, Musi River basin, and high-density IT corridor in HITEC City / Gachibowli.",
+      "coordinates": [78.4400, 17.3850, 78.4950, 17.4350],
+      "primary_sensors": "Sentinel-2 MSI (10m), Cartosat-2S, RISAT-1A"
+    },
+    {
+      "id": "kb_district_02",
+      "category": "Indian Administrative Geography",
+      "entity": "Kamrup Metropolitan / Brahmaputra Basin, Assam",
+      "code": "DIST_AS_KAMRUP",
+      "description": "Riparian flood-prone river basin along the Brahmaputra River. Experiences intense monsoon inundations between June and September, altering sandbars (chars) and agricultural boundaries.",
+      "coordinates": [91.7000, 26.1500, 91.7800, 26.2200],
+      "primary_sensors": "Sentinel-1 SAR (all-weather flood mapping), Sentinel-2 MSI"
+    },
+    {
+      "id": "kb_district_03",
+      "category": "Indian Administrative Geography",
+      "entity": "Ludhiana District, Punjab",
+      "code": "DIST_PB_LUDHIANA",
+      "description": "Central Punjab intensive agricultural hub fed by Sirhind Canal network. Dominant crop rotation of Paddy (Kharif) and Wheat (Rabi) with high seasonal surface soil moisture variation.",
+      "coordinates": [75.8000, 30.8500, 75.8800, 30.9300],
+      "primary_sensors": "Sentinel-2 MSI, ResourceSat-2 LISS-IV, RISAT-1A"
+    }
+  ]
+}
