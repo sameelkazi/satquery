@@ -1,0 +1,152 @@
+{
+  "adapted_timestamp": 1787774141.9395278,
+  "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "quantization_active": "bitsandbytes_nf4",
+  "adapter_active_for_any_query": true,
+  "comparisons": [
+    {
+      "query_id": "base_01",
+      "query": "locate buildings in this image",
+      "image": "hyderabad_urban_optical.png",
+      "task": "Grounding",
+      "before": {
+        "text": "Grounded 1 region matching your query.",
+        "confidence": 0.513,
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "stage": "Phase 1 Baseline"
+      },
+      "after": {
+        "text": "Grounded 1 region matching your query.",
+        "boxes": [
+          {
+            "id": "box_1",
+            "bbox": [
+              0.1,
+              0.03,
+              1.0,
+              1.0
+            ],
+            "label": "Target Region 1 (GeoChat-token format)",
+            "confidence": 0.75
+          }
+        ],
+        "confidence": 0.513,
+        "confidence_basis": "model_logits",
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "adapter_active": true,
+        "quantization": "bitsandbytes_nf4",
+        "duration_ms": 2838.7,
+        "stage": "Phase 2: VRSBench LoRA active on this call"
+      },
+      "confidence_delta": 0.0
+    },
+    {
+      "query_id": "base_02",
+      "query": "Describe the land-cover and major objects visible in this image",
+      "image": "hyderabad_urban_optical.png",
+      "task": "VQA",
+      "before": {
+        "text": "The image shows a large body of water surrounded by urban areas with varying intensities of green and brown colors indicating different types of vegetation and built environments.",
+        "confidence": 0.594,
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "stage": "Phase 1 Baseline"
+      },
+      "after": {
+        "text": "The image shows a large body of water surrounded by urban areas with varying intensities of green and brown colors indicating different types of vegetation and built environments.",
+        "boxes": [],
+        "confidence": 0.594,
+        "confidence_basis": "model_logits",
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "adapter_active": true,
+        "quantization": "bitsandbytes_nf4",
+        "duration_ms": 3305.7,
+        "stage": "Phase 2: VRSBench LoRA active on this call"
+      },
+      "confidence_delta": 0.0
+    },
+    {
+      "query_id": "base_03",
+      "query": "Zero-shot classification of land-cover categories",
+      "image": "punjab_agribelt_optical.png",
+      "task": "ZeroShotSearch",
+      "before": {
+        "text": "",
+        "confidence": 0.7362,
+        "model": "unknown",
+        "stage": "Phase 1 Baseline"
+      },
+      "after": {
+        "text": "urban",
+        "boxes": [],
+        "confidence": 0.341,
+        "confidence_basis": "model_logits",
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "adapter_active": true,
+        "quantization": "bitsandbytes_nf4",
+        "duration_ms": 533.5,
+        "stage": "Phase 2: VRSBench LoRA active on this call"
+      },
+      "confidence_delta": -0.395
+    },
+    {
+      "query_id": "base_04",
+      "query": "Highlight the water body and river channel",
+      "image": "brahmaputra_flood_optical_t1.png",
+      "task": "VQA",
+      "before": {
+        "text": "Grounded 1 region matching your query.",
+        "confidence": 0.585,
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "stage": "Phase 1 Baseline"
+      },
+      "after": {
+        "text": "Grounded 1 region matching your query.",
+        "boxes": [
+          {
+            "id": "box_1",
+            "bbox": [
+              0.51,
+              0.3,
+              0.79,
+              0.68
+            ],
+            "label": "Target Region 1 (GeoChat-token format)",
+            "confidence": 0.75
+          }
+        ],
+        "confidence": 0.585,
+        "confidence_basis": "model_logits",
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "adapter_active": true,
+        "quantization": "bitsandbytes_nf4",
+        "duration_ms": 1616.4,
+        "stage": "Phase 2: VRSBench LoRA active on this call"
+      },
+      "confidence_delta": 0.0
+    },
+    {
+      "query_id": "base_05",
+      "query": "What type of agricultural crops or vegetation are present?",
+      "image": "punjab_agribelt_optical.png",
+      "task": "VQA",
+      "before": {
+        "text": "Agricultural fields",
+        "confidence": 0.517,
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "stage": "Phase 1 Baseline"
+      },
+      "after": {
+        "text": "Agricultural fields",
+        "boxes": [],
+        "confidence": 0.517,
+        "confidence_basis": "model_logits",
+        "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+        "adapter_active": true,
+        "quantization": "bitsandbytes_nf4",
+        "duration_ms": 759.9,
+        "stage": "Phase 2: VRSBench LoRA active on this call"
+      },
+      "confidence_delta": 0.0
+    }
+  ]
+}

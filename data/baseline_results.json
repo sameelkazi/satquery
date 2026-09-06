@@ -1,0 +1,117 @@
+{
+  "baseline_run_timestamp": 1787773957.3456535,
+  "results": [
+    {
+      "query_id": "base_01",
+      "query": "locate buildings in this image",
+      "aoi": "Hyderabad Urban Corridor",
+      "task": "Grounding",
+      "image": "hyderabad_urban_optical.png",
+      "duration_ms": 2711.0,
+      "text_response": "Grounded 1 region matching your query.",
+      "boxes": [
+        {
+          "id": "box_1",
+          "bbox": [
+            0.1,
+            0.03,
+            1.0,
+            1.0
+          ],
+          "label": "Target Region 1 (GeoChat-token format)",
+          "confidence": 0.75
+        }
+      ],
+      "confidence": 0.513,
+      "confidence_basis": "model_logits",
+      "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+      "adapter_active": true,
+      "adaptation_stage": "Pre-fine-tuning Baseline"
+    },
+    {
+      "query_id": "base_02",
+      "query": "Describe the land-cover and major objects visible in this image",
+      "aoi": "Hyderabad Urban Corridor",
+      "task": "VQA",
+      "image": "hyderabad_urban_optical.png",
+      "duration_ms": 3557.6,
+      "text_response": "The image shows a large body of water surrounded by urban areas with varying intensities of green and brown colors indicating different types of vegetation and built environments.",
+      "boxes": [],
+      "confidence": 0.594,
+      "confidence_basis": "model_logits",
+      "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+      "adapter_active": true,
+      "adaptation_stage": "Pre-fine-tuning Baseline"
+    },
+    {
+      "query_id": "base_03",
+      "query": "Zero-shot classification of land-cover categories",
+      "aoi": "Ludhiana Intensive Agricultural Belt",
+      "task": "ZeroShotSearch",
+      "image": "punjab_agribelt_optical.png",
+      "duration_ms": 214.8,
+      "zero_shot_tags": [
+        {
+          "label": "urban and built-up area",
+          "score": 0.7362
+        },
+        {
+          "label": "wetland and marshland",
+          "score": 0.0861
+        },
+        {
+          "label": "barren land and rock",
+          "score": 0.0822
+        },
+        {
+          "label": "agricultural land and crops",
+          "score": 0.0292
+        }
+      ],
+      "confidence": 0.7362,
+      "adaptation_stage": "Pre-fine-tuning Baseline"
+    },
+    {
+      "query_id": "base_04",
+      "query": "Highlight the water body and river channel",
+      "aoi": "Brahmaputra Flood Basin (Pre-flood)",
+      "task": "VQA",
+      "image": "brahmaputra_flood_optical_t1.png",
+      "duration_ms": 1720.5,
+      "text_response": "Grounded 1 region matching your query.",
+      "boxes": [
+        {
+          "id": "box_1",
+          "bbox": [
+            0.51,
+            0.3,
+            0.79,
+            0.68
+          ],
+          "label": "Target Region 1 (GeoChat-token format)",
+          "confidence": 0.75
+        }
+      ],
+      "confidence": 0.585,
+      "confidence_basis": "model_logits",
+      "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+      "adapter_active": true,
+      "adaptation_stage": "Pre-fine-tuning Baseline"
+    },
+    {
+      "query_id": "base_05",
+      "query": "What type of agricultural crops or vegetation are present?",
+      "aoi": "Ludhiana Agricultural Belt",
+      "task": "VQA",
+      "image": "punjab_agribelt_optical.png",
+      "duration_ms": 769.7,
+      "text_response": "Agricultural fields",
+      "boxes": [],
+      "confidence": 0.517,
+      "confidence_basis": "model_logits",
+      "model": "Qwen/Qwen2.5-VL-3B-Instruct (4-bit NF4) + VRSBench LoRA",
+      "adapter_active": true,
+      "adaptation_stage": "Pre-fine-tuning Baseline"
+    }
+  ]
+}
