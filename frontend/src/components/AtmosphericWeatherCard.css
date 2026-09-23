@@ -1,0 +1,251 @@
+/* AtmosphericWeatherCard CSS - SatQuery Theme */
+
+.sat-weather-wrapper {
+  position: relative;
+  width: 270px;
+  height: 140px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.sat-weather-cardm {
+  position: relative;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Front Card */
+.sat-card {
+  position: relative;
+  width: 260px;
+  height: 135px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.6);
+  padding: 12px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+:is(.dark, [data-theme="dark"]) .sat-card {
+  background: rgba(15, 23, 42, 0.92);
+  color: #ffffff;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(34, 211, 238, 0.3);
+  backdrop-filter: blur(16px);
+}
+
+.sat-weather-svg {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  filter: drop-shadow(0 4px 12px rgba(250, 204, 21, 0.4));
+  transition: transform 0.4s ease;
+}
+
+.sat-card:hover .sat-weather-svg {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.sat-main-temp {
+  position: absolute;
+  top: 16px;
+  left: 98px;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #0f172a;
+}
+
+:is(.dark, [data-theme="dark"]) .sat-main-temp {
+  color: #f8fafc;
+  text-shadow: 0 0 16px rgba(34, 211, 238, 0.35);
+}
+
+.sat-main-sub {
+  position: absolute;
+  top: 52px;
+  left: 98px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0284c7;
+  max-width: 145px;
+  line-height: 1.25;
+}
+
+:is(.dark, [data-theme="dark"]) .sat-main-sub {
+  color: #38bdf8;
+}
+
+.sat-sub-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  right: 16px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0891b2;
+  text-align: center;
+}
+
+:is(.dark, [data-theme="dark"]) .sat-sub-tag {
+  color: #67e8f9;
+  background: rgba(6, 182, 212, 0.16);
+}
+
+/* Expansion Card2 (Behind and below) */
+.sat-card2 {
+  position: absolute;
+  top: 0;
+  width: 248px;
+  height: 135px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.98);
+  z-index: 1;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+:is(.dark, [data-theme="dark"]) .sat-card2 {
+  background: rgba(8, 14, 30, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Expand On Hover */
+.sat-weather-cardm:hover .sat-card2,
+.sat-card2:hover {
+  height: 295px;
+  opacity: 1;
+  pointer-events: auto;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.sat-card:hover {
+  background: #ffffff;
+  border-color: rgba(6, 182, 212, 0.5);
+}
+
+:is(.dark, [data-theme="dark"]) .sat-card:hover {
+  background: rgba(15, 23, 42, 0.98);
+  border-color: rgba(34, 211, 238, 0.6);
+}
+
+/* Upper section of expansion */
+.sat-upper {
+  position: absolute;
+  top: 148px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 16px;
+  gap: 12px;
+}
+
+.sat-stat-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sat-stat-svg {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+  flex-shrink: 0;
+}
+
+.sat-stat-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sat-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1;
+}
+
+:is(.dark, [data-theme="dark"]) .sat-label {
+  color: #94a3b8;
+}
+
+.sat-val {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+:is(.dark, [data-theme="dark"]) .sat-val {
+  color: #f1f5f9;
+}
+
+/* Lower section */
+.sat-lower {
+  position: absolute;
+  top: 205px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 14px;
+}
+
+.sat-mini-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.sat-mini-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+:is(.dark, [data-theme="dark"]) .sat-mini-label {
+  color: #cbd5e1;
+}
+
+/* Card3 Bottom Ribbon */
+.sat-card3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #10b981, #059669);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sat-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #ffffff;
+}

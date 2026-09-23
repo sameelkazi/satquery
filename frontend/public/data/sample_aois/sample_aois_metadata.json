@@ -1,0 +1,94 @@
+{
+  "sample_aois": [
+    {
+      "id": "aoi_01_hyderabad",
+      "name": "Hyderabad Urban Corridor & Hussain Sagar Buffer",
+      "state": "Telangana",
+      "district": "Hyderabad",
+      "bbox": [
+        78.44,
+        17.385,
+        78.495,
+        17.435
+      ],
+      "crs": "EPSG:4326",
+      "sensors": {
+        "optical": {
+          "file": "hyderabad_urban_optical.png",
+          "sensor": "Sentinel-2 MSI",
+          "resolution_m": 10.0,
+          "date": "2026-03-15T05:30:00Z"
+        },
+        "sar": {
+          "file": "hyderabad_urban_sar.png",
+          "sensor": "Sentinel-1 C-SAR (Co-registered)",
+          "polarization": "VV+VH",
+          "date": "2026-03-15T05:30:00Z"
+        }
+      },
+      "land_cover_classes": [
+        "Built-up",
+        "Water Body",
+        "Urban Greenery",
+        "Road Infrastructure"
+      ]
+    },
+    {
+      "id": "aoi_02_brahmaputra",
+      "name": "Brahmaputra Flood Basin & Inundation Zone",
+      "state": "Assam",
+      "district": "Kamrup / Guwahati",
+      "bbox": [
+        91.7,
+        26.15,
+        91.78,
+        26.22
+      ],
+      "crs": "EPSG:4326",
+      "sensors": {
+        "optical_t1": {
+          "file": "brahmaputra_flood_optical_t1.png",
+          "sensor": "Sentinel-2 MSI",
+          "date": "2026-04-10T04:45:00Z",
+          "state": "Pre-flood baseline"
+        },
+        "optical_t2": {
+          "file": "brahmaputra_flood_optical_t2.png",
+          "sensor": "Sentinel-2 MSI",
+          "date": "2026-07-20T04:45:00Z",
+          "state": "Monsoon inundation"
+        }
+      },
+      "land_cover_classes": [
+        "Water / Flood Inundation",
+        "Cropland",
+        "Riverine Sandbar"
+      ]
+    },
+    {
+      "id": "aoi_03_punjab",
+      "name": "Ludhiana Intensive Agricultural Belt",
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "bbox": [
+        75.8,
+        30.85,
+        75.88,
+        30.93
+      ],
+      "crs": "EPSG:4326",
+      "sensors": {
+        "optical": {
+          "file": "punjab_agribelt_optical.png",
+          "sensor": "Sentinel-2 MSI",
+          "date": "2026-02-28T05:15:00Z"
+        }
+      },
+      "land_cover_classes": [
+        "Intensive Cropland",
+        "Irrigation Canal",
+        "Fallow Land"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use SatQuery AI, its fine-tuning methodology, or its empirical coordinate calibration in your research, please cite this work."
+title: "SatQuery: An Edge-Deployable Agentic Vision-Language Architecture for Grounded Remote Sensing Perception and Multi-Sensory Reasoning"
+type: software
+authors:
+  - family-names: Kazi
+    given-names: Sameel
+    affiliation: "Department of Computer Engineering, Sardar Patel Institute of Technology (SPIT), Mumbai"
+    email: "sameel.kazi@spit.ac.in"
+    orcid: "https://orcid.org/0009-0002-3925-976X"
+repository-code: "https://github.com/sameelkazi/satquery"
+url: "https://github.com/sameelkazi/satquery"
+abstract: >-
+  SatQuery is an integrated, edge-deployable multimodal architecture for
+  grounded remote-sensing perception, combining parameter-efficient
+  vision-language grounding (LoRA-adapted Qwen2.5-VL / Qwen3-VL on
+  VRSBench), bi-temporal change detection, optical-SAR cross-modal fusion,
+  and zero-shot land-cover classification behind an agentic semantic
+  intent router.
+license: Apache-2.0
+version: 1.0.0
+date-released: "2026-09-15"
+keywords:
+  - remote sensing
+  - vision-language models
+  - LoRA
+  - parameter-efficient fine-tuning
+  - SAR fusion
+  - change detection
+  - VRSBench
+  - agentic AI
+  - ISRO
+  - SIH26167
+preferred-citation:
+  type: article
+  title: "SatQuery: An Edge-Deployable Agentic Vision-Language Architecture for Grounded Remote Sensing Perception and Multi-Sensory Reasoning"
+  authors:
+    - family-names: Kazi
+      given-names: Sameel
+  journal: "SatQuery AI Research, Smart India Hackathon 2026 (Ministry of Education & ISRO SIH26167 Initiative)"
+  year: 2026
+  url: "https://github.com/sameelkazi/satquery"
