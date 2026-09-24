@@ -31,9 +31,6 @@ export default function Navbar({ onBookDemo, onOpenCompliance, onOpenRoadmap, on
           <span className="font-bold tracking-tight text-base sm:text-lg md:text-xl text-[#F6F4EE] drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             SatQuery <span className="font-serif italic font-normal text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.8)]">AI</span>
           </span>
-          <span className="hidden sm:inline-block text-[10px] md:text-[11px] font-bold uppercase tracking-wider bg-cyan-950/70 text-cyan-300 border border-cyan-400/40 px-2.5 py-0.5 rounded-full shadow-[0_0_12px_rgba(6,182,212,0.25)] backdrop-blur-md font-mono">
-            ISRO • SIH26167
-          </span>
         </div>
       </div>
 
