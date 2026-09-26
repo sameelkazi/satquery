@@ -29,6 +29,7 @@ frontend/node_modules/
 *.bin
 *.safetensors
 *.ckpt
+finetuning/geochat_bigearthnet_lora/
 finetuning/geochat_bigearthnet_lora_final/
 finetuning/geochat_bigearthnet_lora_checkpoints/
 finetuning/bigearthnet_txt_real/

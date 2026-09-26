@@ -752,7 +752,7 @@ def build_academic_pdf(output_path):
         print(f"[!] Warning rendering preview images: {e}")
 
 if __name__ == '__main__':
-    target = os.path.join("docs", "research_paper", "SatQuery_IEEE_Research_Paper.pdf")
+    target = os.path.join("assets", "SatQuery_IEEE_Research_Paper.pdf")
     os.makedirs(os.path.dirname(target), exist_ok=True)
     build_academic_pdf(target)
 

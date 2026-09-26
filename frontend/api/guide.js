@@ -1,20 +1,9 @@
 /**
  * Vercel Serverless Function: SatQuery Guide Bot
  *
- * Purpose: a judge-facing Q&A assistant that answers questions about SatQuery's features
- * and technical architecture, grounded on the project's own documentation (see
- * _guideKnowledge.js, generated from docs/GUIDE_BOT_KNOWLEDGE.md). Powered by Gemini, using
- * the same multi-key failover pool pattern as api/vlm.js (GEMINI_API_KEY / _2 / _3 /
- * GEMINI_API_KEYS, all kept server-side only).
- *
- * Honesty contract (this is the whole point of this endpoint, given what it was built to
- * answer honestly about): this handler NEVER fabricates an answer. If every Gemini attempt
- * fails, it returns a plain, honest "couldn't reach the assistant" message -- never a
- * plausible-sounding invented answer standing in for a real one. This mirrors, and is a
- * direct reaction to, the fabrication problems found and fixed elsewhere in this project
- * (see the "Known limitations" section of the knowledge base itself) -- the one feature
- * whose entire job is to honestly describe the system to judges must not itself repeat
- * that mistake.
+ * Purpose: A technical Q&A assistant that answers questions about SatQuery's features
+ * and technical architecture, grounded on the project's knowledge base (see
+ * _guideKnowledge.js). Powered by Gemini, using a multi-key failover pool pattern.
  */
 
 import { GUIDE_KNOWLEDGE } from './_guideKnowledge.js';

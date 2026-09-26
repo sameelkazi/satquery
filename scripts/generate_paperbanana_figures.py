@@ -21,7 +21,7 @@ from matplotlib.gridspec import GridSpec
 import numpy as np
 from PIL import Image
 
-OUT_DIR = Path("docs/research_paper/figures")
+OUT_DIR = Path("frontend/public/paper_figures")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Aesthetic palette (Nature/IEEE styling)
