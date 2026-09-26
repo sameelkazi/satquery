@@ -2,15 +2,15 @@
 
 <p align="center">
   <a href="https://www.isro.gov.in" target="_blank" rel="noopener noreferrer">
-    <img src="docs/assets/isro_logo.png" height="75" alt="Indian Space Research Organisation (ISRO)" />
+    <img src="assets/isro_logo.png" height="75" alt="Indian Space Research Organisation (ISRO)" />
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://sih.gov.in" target="_blank" rel="noopener noreferrer">
-    <img src="docs/assets/sih_logo.png" height="65" alt="Smart India Hackathon 2026" />
+    <img src="assets/sih_logo.png" height="65" alt="Smart India Hackathon 2026" />
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.spit.ac.in" target="_blank" rel="noopener noreferrer">
-    <img src="docs/assets/spit_logo.png" height="75" alt="Sardar Patel Institute of Technology (SPIT)" />
+    <img src="assets/spit_logo.png" height="75" alt="Sardar Patel Institute of Technology (SPIT)" />
   </a>
 </p>
 
@@ -19,7 +19,7 @@
 [![ISRO Space Tech](https://img.shields.io/badge/ISRO-SIH26167-orange.svg?style=flat-square)](https://sih.gov.in)
 [![Live Demo](https://img.shields.io/badge/Live_Demo-satquery2026.vercel.app-000000.svg?style=flat-square&logo=vercel)](https://satquery2026.vercel.app)
 [![HuggingFace v2](https://img.shields.io/badge/HuggingFace-LoRA_v2_Adapter-FFD21E.svg?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/Sameelkazi/satquery-qwen25vl-vrsbench-lora-v2)
-[![IEEE Paper](https://img.shields.io/badge/Research_Paper-IEEE_TGRS_Format-blue.svg?style=flat-square)](docs/research_paper/SatQuery_IEEE_Research_Paper.pdf)
+[![IEEE Paper](https://img.shields.io/badge/Research_Paper-IEEE_TGRS_Format-blue.svg?style=flat-square)](assets/SatQuery_IEEE_Research_Paper.pdf)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-ee4c2c.svg?style=flat-square)](https://pytorch.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg?style=flat-square)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.3-61dafb.svg?style=flat-square)](https://reactjs.org)
@@ -57,7 +57,7 @@ On a strictly held-out, disjoint test partition of VRSBench ($N=350$), SatQuery 
 
 | **Visual Referring Grounding** | **Bi-Temporal Change Detection** | **Optical–SAR Radar Fusion** |
 |:---:|:---:|:---:|
-| <img src="docs/assets/demo_grounding.gif" width="100%" alt="Visual Referring Grounding" /> | <img src="docs/assets/demo_change_detection.gif" width="100%" alt="Bi-Temporal Change Detection" /> | <img src="docs/assets/demo_sar_fusion.gif" width="100%" alt="Optical-SAR Fusion" /> |
+| <img src="assets/demo_grounding.gif" width="100%" alt="Visual Referring Grounding" /> | <img src="assets/demo_change_detection.gif" width="100%" alt="Bi-Temporal Change Detection" /> | <img src="assets/demo_sar_fusion.gif" width="100%" alt="Optical-SAR Fusion" /> |
 | *Real LoRA-adapted Qwen output: calibrated spatial bounding box* | *Real AdaptFormer-CD output: bi-temporal change mask + quantified delta* | *Real Sentinel-1/2 cross-modal fusion: dual-pol SAR backscatter* |
 
 ---
@@ -212,16 +212,16 @@ SATQUERY/
 │   │   ├── api/client.js            # Offline-resilient API client with edge simulator
 │   │   └── utils/                   # Client-side jsPDF SITREP & GeoJSON generators
 ├── finetuning/                      # Model Adaptation & Training Pipelines
-│   ├── lora_finetune.py             # PEFT QLoRA training script
-│   ├── kaggle_finetune_qwen2vl.ipynb# Free-tier T4 GPU training notebook
-│   └── prepare_real_training_images.py # VRSBench dataset ingestion script
-├── docs/                            # Official Documentation & Manuscripts
-│   ├── research_paper/              # IEEE manuscript (LaTeX, PDF, BibTeX)
-│   │   ├── SatQuery_IEEE_Research_Paper.pdf # Official 4-page academic manuscript
-│   │   └── references.bib           # Complete bibliography
-│   ├── presentation/                # Briefing documents, scripts & executive summaries
-│   ├── SYSTEM_SPECIFICATION.md      # Comprehensive technical architecture PRD
-│   └── FEATURE_ROADMAP.md           # Engineering milestone roadmap
+│   ├── bigearthnet_prepare.py       # Unified Sentinel-1/2 optical-SAR patch extraction & prep
+│   ├── cdvqa_prepare.py             # Change detection VQA dataset builder
+│   ├── rsvqa_prepare.py             # Remote sensing VQA pipeline builder
+│   ├── kaggle_finetune_qwen3vl8b_v5.ipynb # Multimodal GPU fine-tuning notebook
+│   └── V4_TRAINING_RUNBOOK.md       # Fine-tuning specifications & training telemetry
+├── assets/                          # Institutional logos, research paper & visual demos
+│   ├── SatQuery_IEEE_Research_Paper.pdf # Official academic research paper
+│   ├── demo_grounding.gif           # Visual referring expression grounding demo
+│   ├── demo_change_detection.gif    # Bi-temporal change detection demo
+│   └── demo_sar_fusion.gif          # Optical-SAR radar fusion demo
 ├── tests/                           # Automated PyTest Verification Suite
 │   ├── test_query_api.py            # End-to-end API integration tests
 │   ├── test_geochat_rewrite.py      # Vision-language engine verification
@@ -328,9 +328,9 @@ In the interest of the same standard we hold the research claims to, this sectio
 
 | Stakeholder | Institution | Role & Initiative |
 |:---:|---|---|
-| <a href="https://www.isro.gov.in" target="_blank"><img src="docs/assets/isro_logo.png" height="52" alt="ISRO" /></a> | **Indian Space Research Organisation (ISRO)**<br/>*Department of Space, Government of India* | Problem Statement Sponsoring Body (SIH26167) |
-| <a href="https://sih.gov.in" target="_blank"><img src="docs/assets/sih_logo.png" height="42" alt="SIH" /></a> | **Smart India Hackathon 2026**<br/>*Ministry of Education's Innovation Cell (MIC) & AICTE* | Premier National Innovation Platform |
-| <a href="https://www.spit.ac.in" target="_blank"><img src="docs/assets/spit_logo.png" height="52" alt="SPIT" /></a> | **Sardar Patel Institute of Technology (SPIT)**<br/>*Bhartiya Vidya Bhavan, Mumbai* | Academic Institution & Research Base |
+| <a href="https://www.isro.gov.in" target="_blank"><img src="assets/isro_logo.png" height="52" alt="ISRO" /></a> | **Indian Space Research Organisation (ISRO)**<br/>*Department of Space, Government of India* | Problem Statement Sponsoring Body (SIH26167) |
+| <a href="https://sih.gov.in" target="_blank"><img src="assets/sih_logo.png" height="42" alt="SIH" /></a> | **Smart India Hackathon 2026**<br/>*Ministry of Education's Innovation Cell (MIC) & AICTE* | Premier National Innovation Platform |
+| <a href="https://www.spit.ac.in" target="_blank"><img src="assets/spit_logo.png" height="52" alt="SPIT" /></a> | **Sardar Patel Institute of Technology (SPIT)**<br/>*Bhartiya Vidya Bhavan, Mumbai* | Academic Institution & Research Base |
 
 ---
 
