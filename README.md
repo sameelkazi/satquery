@@ -27,7 +27,6 @@
 
 <br/>
 
-**Official Research & Engineering Repository**  
 **Problem Statement:** SIH26167 — *Development of an AI-Based Query System for Satellite Imagery*  
 **Sponsoring Organization:** Indian Space Research Organisation (ISRO), Department of Space (DOS)  
 **Academic Institution:** Sardar Patel Institute of Technology (SPIT), Mumbai  
