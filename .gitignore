@@ -64,3 +64,5 @@ frontend/public/videos/ref_frame.jpg
 .agents/
 Claude outputs/
 SIH_Pitch_Strategy_and_Slide_Content.md
+DEMO_VIDEO_*.md
+video_recordings/
